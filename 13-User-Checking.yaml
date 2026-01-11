@@ -1,0 +1,17 @@
+- name: "Creating User"
+  hosts: web
+  become: yes
+  tasks:
+  - name: "Checking whether User is exist or not " 
+    ansible.builtin.command: id expense
+    register: USER
+    ignore_errors: true
+
+  - name: "print the user information "
+    ansible.builtin.debug:
+     msg: "user information {{ USER }}"
+
+  - name: create user
+    ansible.builtin.command: useradd expense
+    when: USER.rc !=0        
+
