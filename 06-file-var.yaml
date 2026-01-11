@@ -1,0 +1,8 @@
+- name: "Example of File Level Variables"
+  hosts: web
+  vars_files:
+  - var.yaml
+  tasks:
+  - name: "File Level vars"
+    ansible.builtin.debug:
+     msg: "Couser is : {{ Course}} , Duration is: {{ Duration }} Trainer is : {{Trainer}}"
