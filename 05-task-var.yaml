@@ -5,10 +5,10 @@
    Trainer: "Siva Kumar Reddy M"
    Duration: "120 hrs"
   tasks:
-  - name: Global Level Variables
+  - name: "Global Level Variables"
     ansible.builtin.debug:
     msg: "Hi, I am taking the coure of {{ Course}} with Trainer {{ Trainer }} and duration is {{ Duration}}"
-  - name: Task Level Variables
+  - name: "Task Level Variables"
     vars:
       Course: " .Net Core"
       Trainer: "Shailendra"
