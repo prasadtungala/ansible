@@ -8,7 +8,7 @@
     prompt: "Please Enter the Duration : "
     private: false
   - name: Trainer
-    prompt: "Please Enter the Duration : "
+    prompt: "Please Enter the Trainer : "
     private: false     
   tasks:
   - name: print the prompt information
