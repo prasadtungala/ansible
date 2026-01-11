@@ -1,0 +1,18 @@
+- name: "Example of Task Level Variables"
+  hosts: web
+  vars:
+   Course: "DevOps with AWS"
+   Trainer: "Siva Kumar Reddy M"
+   Duration: "120 hrs"
+  tasks:
+  - name: Global Level Variables
+    ansible.builtin.debug:
+    msg: "Hi, I am taking the coure of {{ Course}} with Trainer {{ Trainer }} and duration is {{ Duration}}"
+  - name: Task Level Variables
+    vars:
+      Course: " .Net Core"
+      Trainer: "Shailendra"
+      Duration: "2 months"    
+    ansible.builtin.debug:
+    msg: "Hi, I am taking the coure of {{ Course}} with Trainer {{ Trainer }} and duration is {{ Duration}}"
+    
