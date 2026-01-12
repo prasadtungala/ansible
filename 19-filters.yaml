@@ -34,4 +34,9 @@
        Trainer: " Siva Kumar Reddy M"    
      ansible.builtin.debug:
       msg: " {{ course | dict2items }}"       
-      
+   - name: Convert List to map
+     vars:
+       course:
+       - { "key": "name", "value" : ".Net Core"} 
+       - { "key": "duration", "value" : "3 Months"} 
+       - { "key": "Trainer", "value" : "Shailendra"}  
