@@ -16,4 +16,14 @@
       numbers: [1,2,5,8,9,7,5,45]
      ansible.builtin.debug:
       msg: " {{ numbers | unique }} "
+   - name: Minimum
+     vars:
+      numbers: [1,2,5,8,9,7,5,45]
+     ansible.builtin.debug:
+      msg: " Minumum No. : {{ numbers | min }} "  
+   - name: Maximum
+     vars:
+      numbers: [1,2,5,8,9,7,5,45]
+     ansible.builtin.debug:
+      msg: " Minumum No. : {{ numbers | max }} "     
       
