@@ -1,0 +1,7 @@
+- name: filter in ansible
+  hosts: web
+  become: yes
+  tasks:
+   - name: filter
+     ansible.builtin.debug:
+      msg: " {{ Main_Course | default('Ansible')}} "
