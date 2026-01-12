@@ -8,7 +8,7 @@
 
   - name: print the Operating System
     ansible.builtin.debug:
-    msg: " OS :: {{ ansible_distribution }} "
+     msg: " OS :: {{ ansible_distribution }} "
 
   - name: Install nginx if it is RedHat
     ansible.builtin.dnf:
