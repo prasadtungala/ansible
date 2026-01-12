@@ -36,7 +36,9 @@
       msg: " {{ course | dict2items }}"       
    - name: Convert List to map
      vars:
-       course:
+       course_new:
        - { "key": "name", "value" : ".Net Core"} 
        - { "key": "duration", "value" : "3 Months"} 
        - { "key": "Trainer", "value" : "Shailendra"}  
+     ansible.builtin.debug:
+       msg: " {{ course_new | items2dict}}" 
