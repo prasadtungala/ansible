@@ -5,3 +5,9 @@
    - name: filter
      ansible.builtin.debug:
       msg: " {{ Main_Course | default('Ansible')}} "
+   - name: Convert to Upper Case
+     ansible.builtin.debug:
+      msg: " {{ Main_Course | default('Ansible') | upper }} "
+   - name: Convert to Lower Case
+     ansible.builtin.debug:
+      msg: " {{ Main_Course | default('Ansible') | lower }} "        
