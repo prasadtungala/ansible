@@ -6,6 +6,10 @@
     ansible.builtin.debug:
      msg: " {{ ansible_facts}} "
 
+  - name: print the stats
+    ansible.builtin.debug:
+    msg: " OS :: {{ ansible_distribution }} "
+
   - name: Install nginx if it is RedHat
     ansible.builtin.dnf:
      name: nginx
