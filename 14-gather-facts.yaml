@@ -1,0 +1,7 @@
+- name: finding the Operating System
+  hosts: web
+  become: yes
+  tasks:
+  - name: facts
+    ansible.builtin.debug:
+     msg: "{{builtin_facts}}"
