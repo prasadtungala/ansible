@@ -13,7 +13,7 @@
       msg: " {{ Main_Course | default('Ansible') | lower }} "        
    - name: Removing Duplicate
      vars:
-      numbers:[1,2,5,8,9,7,5,45]
+      numbers: [1,2,5,8,9,7,5,45]
      ansible.builtin.debug:
       msg: " {{ numbers | unique }} "
       
