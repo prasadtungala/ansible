@@ -25,5 +25,13 @@
      vars:
       numbers: [1,2,5,8,9,7,5,45]
      ansible.builtin.debug:
-      msg: " Minumum No. : {{ numbers | max }} "     
+      msg: " Minumum No. : {{ numbers | max }} " 
+   - name: Convert map to List
+     vars:
+      course:
+       name: " DevOps with Aws"
+       duration: " 120 hrs"
+       Trainer: " Siva Kumar Reddy M"    
+     ansible.builtin.debug:
+      msg: " {{ course | dict2items }}"       
       
