@@ -3,9 +3,9 @@
   become: yes
   tasks:
   - name: print the stats
-    ansible.builtin.default:
+    ansible.builtin.debug:
      msg: " {{ ansible_facts}} "
-     
+
   - name: Install nginx if it is RedHat
     ansible.builtin.dnf:
      name: nginx
