@@ -1,0 +1,19 @@
+- name: finding the Operating System
+  hosts: web
+  become: yes
+  tasks:
+  - name: print the stats
+    ansible.builtin.default:
+     msg: " {{ ansible_facts}} "
+     
+  - name: Install nginx if it is RedHat
+    ansible.builtin.dnf:
+     name: nginx
+     state: present
+
+  - name: Install nginx if it is Debian
+    ansible.builtin.apt:
+     name: nginx
+     state: present
+     when: ansible_os_family == "Debian"
+           
