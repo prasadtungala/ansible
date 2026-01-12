@@ -6,7 +6,7 @@
     ansible.builtin.debug:
      msg: " {{ ansible_facts}} "
 
-  - name: print the stats
+  - name: print the Operating System
     ansible.builtin.debug:
     msg: " OS :: {{ ansible_distribution }} "
 
